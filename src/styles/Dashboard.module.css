@@ -1,0 +1,88 @@
+/* src/styles/Dashboard.module.css */
+
+/* Overall container fills the viewport with background */
+.dashboardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    margin: 0;
+    padding: 2rem; /* Padding around the content */
+    background-color: #e6f7e8; /* Light green dashboard background */
+    box-sizing: border-box;
+  }
+  
+  /* Separate container for title and content */
+  .dashboardContentWrapper {
+    width: 100%;
+    max-width: 1200px; /* Centered and constrained width */
+    padding: 2rem;
+    background-color: #d6f5da; /* Slightly darker green for distinction */
+    border-radius: 12px; /* Rounded corners for the content area */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-sizing: border-box;
+  }
+  
+  /* Title styles */
+  .dashboardTitle {
+    color: #147d0f; /* Enhanced green */
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Card grid container */
+  .dashboardContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: flex-start; /* Align cards at the top */
+  }
+  
+  /* Individual card styling */
+  .card {
+    flex: 1 1 calc(30% - 1rem); /* Responsive grid: 3 cards per row */
+    min-width: 280px; /* Minimum card width */
+    max-width: 400px; /* Maximum card width */
+    border: 2px solid #1d7e18; /* Green border */
+    border-radius: 12px; /* Rounded corners */
+    padding: 1.5rem;
+    background-color: #ffffff; /* White card background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card title */
+  .cardTitle {
+    font-size: 1.5rem;
+    color: #147d0f; /* Match the dashboard theme */
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Card description */
+  .cardContent {
+    color: #555; /* Slightly darker text */
+    line-height: 1.6;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .dashboardContent {
+      flex-direction: column; /* Stack cards vertically */
+    }
+  
+    .card {
+      flex: 1 1 100%; /* Cards take full width */
+    }
+  }
+  

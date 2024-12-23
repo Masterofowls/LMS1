@@ -1,0 +1,92 @@
+/* src/styles/Header.module.css */
+
+/* Base header styles */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #147d0f, #1d7e18);
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 12px 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Header styles when scrolled */
+  .header.shrink {
+    padding: 0.5rem 2rem;
+    background: linear-gradient(90deg, #0f5e0a, #147d0f);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Navigation styles */
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* Link styles */
+  .link {
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    background-color: transparent;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s ease-in-out;
+  }
+  
+  .link:hover {
+    background-color: #32a852;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Active link styles */
+  .activeLink {
+    background-color: #0f5e0a;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .activeLink:hover {
+    background-color: #147d0f;
+  }
+  
+  /* Hover animation for smooth transitions */
+  @keyframes linkHover {
+    0% {
+      transform: translateY(0);
+      background-color: transparent;
+    }
+    50% {
+      transform: translateY(-5px);
+      background-color: #32a852;
+    }
+    100% {
+      transform: translateY(0);
+      background-color: transparent;
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .link {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+    }
+  
+    .header {
+      padding: 0.8rem;
+    }
+  }
+  

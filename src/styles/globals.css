@@ -1,0 +1,43 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ensure full width without horizontal scrollbars */
+  height: 100%; /* Ensure full height covers the viewport */
+  overflow-x: hidden; /* Prevent horizontal scrollbars */
+  overflow-y: auto; /* Allow vertical scrolling for content overflow */
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9fafb; /* Light gray background */
+  color: #333;
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the layout spans the entire viewport */
+}
+
+header {
+  background-color: #147d0f; /* Green header */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+footer {
+  background-color: #147d0f; /* Green footer */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+main {
+  flex: 1; /* Grow to fill available space */
+  display: flex; /* Flexbox layout for centering */
+  flex-direction: column; /* Allow vertical stacking */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  width: 100%; /* Ensure main fills the width */
+}
